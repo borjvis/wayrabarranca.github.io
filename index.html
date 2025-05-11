@@ -3,29 +3,128 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Wayra Barranca</title>
-    <style>
-        body {
-            background-color: orange;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: white;
-            text-align: center;
-        }
-        header {
-            padding: 20px;
-        }
-        img.logo {
-            width: 150px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayra Barranca </title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <img src="imagenes/logo_wayra.png" alt="Logo Wayra" class="logo">
-        <h1>Bienvenido a Wayra Barranca</h1>
-        <p>Tu encomienda segura y a tiempo</p>
+<body style="background-color: #ff4400;">
+    <!-- ChatBot Wayra Barranca -->
+<style>
+  #chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6f00;
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  #chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  #chatbot-header {
+    background-color: #ff6f00;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #chatbot-body {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  #chatbot-img {
+    width: 60px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 50%;
+  }
+</style>
+
+<!-- Botón flotante -->
+<button id="chatbot-button" onclick="toggleChatbot()">
+  <img src="bot_image.png.svg"Chat Bot width="100" />
+</button>
+
+<!-- Ventana del chatbot -->
+<div id="chatbot-window">
+  <div id="chatbot-header">ChatBot Wayra</div>
+  <div id="chatbot-body">
+    ¡Hola! Soy WAYRABOT de </DEl> <strong>Wayra Barranca</strong>. ¿En qué puedo ayudarte hoy?
+  </div>
+</div>
+
+<script>
+  function toggleChatbot() {
+    var chat = document.getElementById("chatbot-window");
+    chat.style.display = (chat.style.display === "none" || chat.style.display === "") ? "block" : "none";
+  }
+</script>
+ <header>
+        <div class="header-content">
+            <img src="IMAGENES/logo de huayra.svg"Logo Wayra" id="logo-principal">
+            
+        </div>
     </header>
+    
+    <section class="intro">
+        <h1>Bienvenido a Wayra Barranca</h1>
+        <p>Somos tu mejor opción para el envío rápido y seguro. ¡Rastrear tus envíos nunca fue tan fácil!</p>
+    </section>
+    
+    <section class="rastrear-envio">
+        <h2>Rastrea tu Envío</h2>
+        <label for="codigo-envio">Ingresa tu código de envío:</label>
+        <input type="text" id="codigo-envio" placeholder="Ej. 123ABC">
+        <button onclick="rastrearEnvio()">Rastrear</button>
+        <p id="resultado"></p>
+    </section>
+
+    <section class="informacion">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="informacion-item">
+            <img src="IMAGENES/huayra corriendo.png"Imagen 1">
+            <p>Envíos rápidos y confiables</p>
+        </div>
+        <div class="informacion-item">
+            <img src="IMAGENES/RECOJO.png"Imagen 2">
+            <p>recojo en domicilio </p>
+        </div>
+        <div class="informacion-item">
+            <img src="IMAGENES/huayra soporte tecnico.png"Imagen 3">
+            <p>Soporte técnico disponible 24/7</p>
+        </div>
+        <div class="informacion-item">
+            <img src="IMAGENES/huayra envio.png"Imagen 4">
+            <p>Seguimiento de envíos en tiempo real</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Contactanos: <a href="mailto:wayraencomienda@gmail.com">wayraencomienda@gmail.com</a></p>
+        <p>Síguenos en nuestras redes sociales: 
+            <a href="https://www.facebook.com/profile.php?id=61576181878221">Facebook</a> |
+            <a href="https://wa.me/51972717814">WhatsApp</a>
+        </p>
+        <p>&copy; 2025 Wayra Encomiendas</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
